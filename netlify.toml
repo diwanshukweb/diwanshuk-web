@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+[build.environment]
+  NODE_VERSION = "24"
+  NEXT_PUBLIC_SITE_URL = "https://diwanshuk-web.netlify.app"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
